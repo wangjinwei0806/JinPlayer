@@ -13,7 +13,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-Create player and set frame:
+Create player:
 
 ```
  MyPlayer *my=[[MyPlayer alloc] init];
