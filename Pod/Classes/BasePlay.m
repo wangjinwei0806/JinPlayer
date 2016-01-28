@@ -8,6 +8,7 @@
 #define MAS_SHORTHAND
 #import "BasePlay.h"
 #import <Masonry/Masonry.h>
+#import "Masonry.h"
 static const CGFloat kVideoControlBarHeight = 40.0;
 static const CGFloat kVideoControlAnimationTimeinterval = 0.3;
 static const CGFloat kVideoControlTimeLabelFontSize = 10.0;
