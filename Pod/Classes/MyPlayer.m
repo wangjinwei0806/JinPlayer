@@ -15,7 +15,6 @@
 #import <AVFoundation/AVFoundation.h>
 //#import <MediaPlayer/MediaPlayer.h>
 CGFloat const gestureMinimumTranslation = 20.0;
-//static const CGFloat kVideoPlayerControllerAnimationTimeinterval = 0.3f;
 
 typedef enum :NSInteger {
     kCameraMoveDirectionNone,
@@ -821,13 +820,7 @@ typedef enum :NSInteger {
     return _movieBackgroundView;
 }
 
-//- (void)setFrame:(CGRect)frame
-//{
-//    [self.view setFrame:frame];
-//    [self.videoControl setFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
-//    [self.videoControl setNeedsLayout];
-//    [self.videoControl layoutIfNeeded];
-//}
+
 
 
 
