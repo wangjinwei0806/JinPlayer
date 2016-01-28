@@ -1,7 +1,6 @@
 
-# JinPlayer
+JinPlayer
 ====================
-
 ![License](https://img.shields.io/cocoapods/l/TWPhotoPicker.svg)
 ![Platform](https://img.shields.io/cocoapods/p/TWPhotoPicker.svg)
 
