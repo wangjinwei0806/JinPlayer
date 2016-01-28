@@ -15,7 +15,7 @@
 #import <AVFoundation/AVFoundation.h>
 //#import <MediaPlayer/MediaPlayer.h>
 CGFloat const gestureMinimumTranslation = 20.0;
-static const CGFloat kVideoPlayerControllerAnimationTimeinterval = 0.3f;
+//static const CGFloat kVideoPlayerControllerAnimationTimeinterval = 0.3f;
 
 typedef enum :NSInteger {
     kCameraMoveDirectionNone,
@@ -722,20 +722,20 @@ typedef enum :NSInteger {
 //    }];
 }
 
-- (void)shrinkScreenButtonClick
-{
-    if (!self.isFullscreenMode) {
-        return;
-    }
-    [UIView animateWithDuration:0.3f animations:^{
-        [self.view setTransform:CGAffineTransformIdentity];
-        self.frame = self.originFrame;
-    } completion:^(BOOL finished) {
-        self.isFullscreenMode = NO;
-        self.videoControl.fullScreenButton.hidden = NO;
-        self.videoControl.shrinkScreenButton.hidden = YES;
-    }];
-}
+//- (void)shrinkScreenButtonClick
+//{
+//    if (!self.isFullscreenMode) {
+//        return;
+//    }
+//    [UIView animateWithDuration:0.3f animations:^{
+//        [self.view setTransform:CGAffineTransformIdentity];
+//        self.frame = self.originFrame;
+//    } completion:^(BOOL finished) {
+//        self.isFullscreenMode = NO;
+//        self.videoControl.fullScreenButton.hidden = NO;
+//        self.videoControl.shrinkScreenButton.hidden = YES;
+//    }];
+//}
 
 - (void)setProgressSliderMaxMinValues {
     CGFloat duration = self.moviePlayer.duration;
@@ -821,13 +821,13 @@ typedef enum :NSInteger {
     return _movieBackgroundView;
 }
 
-- (void)setFrame:(CGRect)frame
-{
-    [self.view setFrame:frame];
-    [self.videoControl setFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
-    [self.videoControl setNeedsLayout];
-    [self.videoControl layoutIfNeeded];
-}
+//- (void)setFrame:(CGRect)frame
+//{
+//    [self.view setFrame:frame];
+//    [self.videoControl setFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+//    [self.videoControl setNeedsLayout];
+//    [self.videoControl layoutIfNeeded];
+//}
 
 
 
