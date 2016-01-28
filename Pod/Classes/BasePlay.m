@@ -7,8 +7,8 @@
 //
 #define MAS_SHORTHAND
 #import "BasePlay.h"
-#import <Masonry/Masonry.h>
-#import "Masonry.h"
+//#import <Masonry/Masonry.h>
+//#import "Masonry.h"
 static const CGFloat kVideoControlBarHeight = 40.0;
 static const CGFloat kVideoControlAnimationTimeinterval = 0.3;
 static const CGFloat kVideoControlTimeLabelFontSize = 10.0;
@@ -80,157 +80,157 @@ static const CGFloat kVideoControlBarAutoFadeOutTimeinterval = 5.0;
 {
     [super layoutSubviews];
     
-//    self.topBar.frame = CGRectMake(CGRectGetMinX(self.bounds), CGRectGetMinY(self.bounds)-22, CGRectGetMaxX(self.bounds), kVideoControlBarHeight+22);
-//
-//    self.closeButton.frame = CGRectMake(CGRectGetMinX(self.bottomBar.bounds), CGRectGetMinX(self.bounds)+30, CGRectGetMaxX(self.closeButton.bounds), CGRectGetMaxY(self.closeButton.bounds));
-//    
-//    
-//    //标题
-//    
-//    self.titleLabel.frame=CGRectMake(CGRectGetWidth(self.closeButton.bounds), CGRectGetMinX(self.bounds)+30, CGRectGetMaxX(self.closeButton.bounds), CGRectGetMaxY(self.closeButton.bounds));
-//    
-//    //分享
-//    self.shareButton.frame=CGRectMake(CGRectGetWidth(self.bottomBar.bounds)-100, CGRectGetMinX(self.bounds)+30,CGRectGetMaxX(self.shareButton.bounds), CGRectGetMaxY(self.shareButton.bounds));
-//    //下载
-//    
-//     self.dowmButton.frame=CGRectMake(CGRectGetWidth(self.bottomBar.bounds)-150, CGRectGetMinX(self.bounds)+30,CGRectGetMaxX(self.dowmButton.bounds), CGRectGetMaxY(self.dowmButton.bounds));
-    
-  //  self.bottomBar.frame = CGRectMake(CGRectGetMinX(self.bounds), CGRectGetMaxY(self.bounds) - kVideoControlBarHeight, CGRectGetMaxX(self.bounds), kVideoControlBarHeight);
-    
-    CGFloat dt=0;
-    CGFloat dw=self.bounds.size.width;
-    CGFloat dh=self.bounds.size.height;
+    self.topBar.frame = CGRectMake(CGRectGetMinX(self.bounds), CGRectGetMinY(self.bounds)-22, CGRectGetMaxX(self.bounds), kVideoControlBarHeight+22);
+
+    self.closeButton.frame = CGRectMake(CGRectGetMinX(self.bottomBar.bounds), CGRectGetMinX(self.bounds)+30, CGRectGetMaxX(self.closeButton.bounds), CGRectGetMaxY(self.closeButton.bounds));
     
     
-    self.topBar.translatesAutoresizingMaskIntoConstraints=NO;
+    //标题
     
-    self.bottomBar.translatesAutoresizingMaskIntoConstraints=NO;
+    self.titleLabel.frame=CGRectMake(CGRectGetWidth(self.closeButton.bounds), CGRectGetMinX(self.bounds)+30, CGRectGetMaxX(self.closeButton.bounds), CGRectGetMaxY(self.closeButton.bounds));
     
-    self.progressSlider.translatesAutoresizingMaskIntoConstraints=NO;
-    self.pauseButton.translatesAutoresizingMaskIntoConstraints=NO;
-    self.playButton.translatesAutoresizingMaskIntoConstraints=NO;
-    self.timeLabel.translatesAutoresizingMaskIntoConstraints=NO;
-    self.bright.translatesAutoresizingMaskIntoConstraints=NO;
-    self.brightSlider.translatesAutoresizingMaskIntoConstraints=NO;
-    self.closeButton.translatesAutoresizingMaskIntoConstraints=NO;
-    self.shareButton.translatesAutoresizingMaskIntoConstraints=NO;
-    self.dowmButton.translatesAutoresizingMaskIntoConstraints=NO;
-    self.titleLabel.translatesAutoresizingMaskIntoConstraints=NO;
-    
-    //顶部
-    [self.topBar makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@(dt));
-        make.right.equalTo(@(dt));
-        make.left.equalTo(@(dt));
-        make.width.equalTo(@(dw));
-        make.height.equalTo(@(kVideoControlBarHeight+10));
-    }];
-    //返回
-    
-    [self.closeButton makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@(10));
-      //  make.right.equalTo(@(10));
-        make.left.equalTo(@(5));
-        make.width.equalTo(@(50));
-        make.height.equalTo(@(50));
-    }];
-    [self.titleLabel makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@(10));
-        //  make.right.equalTo(@(10));
-        make.left.equalTo(@(50));
-       // make.width.equalTo(@(30));
-        make.height.equalTo(@(50));
-    }];
-    //下载
-    [self.dowmButton makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@(10));
-        make.right.equalTo(@(-60));
-       // make.left.equalTo(@(10));
-        make.width.equalTo(@(50));
-        make.height.equalTo(@(50));
-    }];
     //分享
-    [self.shareButton makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@(10));
-          make.right.equalTo(@(-10));
-       // make.left.equalTo(@(10));
-        make.width.equalTo(@(50));
-        make.height.equalTo(@(50));
-    }];
+    self.shareButton.frame=CGRectMake(CGRectGetWidth(self.bottomBar.bounds)-100, CGRectGetMinX(self.bounds)+30,CGRectGetMaxX(self.shareButton.bounds), CGRectGetMaxY(self.shareButton.bounds));
+    //下载
     
-    //底部
-    [self.bottomBar makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@(dh-kVideoControlBarHeight));
-        make.right.equalTo(@(dt));
-        make.left.equalTo(@(dt));
-        make.width.equalTo(@(dw));
-        make.height.equalTo(@(kVideoControlBarHeight));
-    }];
-    //精度条
+     self.dowmButton.frame=CGRectMake(CGRectGetWidth(self.bottomBar.bounds)-150, CGRectGetMinX(self.bounds)+30,CGRectGetMaxX(self.dowmButton.bounds), CGRectGetMaxY(self.dowmButton.bounds));
     
-    [self.progressSlider makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@(15));
-        make.right.equalTo(@(-10));
-        make.left.equalTo(@(kVideoControlBarHeight));
-        make.width.equalTo(@(dt-kVideoControlBarHeight));
-        make.height.equalTo(@(5));
-    }];
-    //暂停
-    [self.pauseButton makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@(1));
-        make.left.equalTo(@(5));
-        make.width.equalTo(@(36));
-        make.height.equalTo(@(57));
-        make.bottom.equalTo(@-2);
-    }];
-    //播放
-    [self.playButton makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@(1));
-        make.left.equalTo(@(5));
-        make.width.equalTo(@(36));
-        make.height.equalTo(@(57));
-        make.bottom.equalTo(@-2);
-    }];
-    //时间
+    self.bottomBar.frame = CGRectMake(CGRectGetMinX(self.bounds), CGRectGetMaxY(self.bounds) - kVideoControlBarHeight, CGRectGetMaxX(self.bounds), kVideoControlBarHeight);
     
-    [self.timeLabel makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@(20));
-        make.left.equalTo(@(dw-110));
-        make.width.equalTo(@(100));
-      //  make.height.equalTo(@(200));
-        make.bottom.equalTo(@0);
-    }];
-    //亮度
-    [self.bright makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo(self);//子view在父view中间
-        make.size.mas_equalTo(CGSizeMake(125, 125));//子view长300，高200
-    }];
-    //亮度进度条
-    
-    [self.brightSlider makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@(95));
-        make.left.equalTo(@(15));
-          make.right.equalTo(@(-15));
-        make.width.equalTo(@(100));
-        make.height.equalTo(@(5));
-        make.bottom.equalTo(@0);
-    }];
-    
-    
-//    self.playButton.frame = CGRectMake(CGRectGetMinX(self.bottomBar.bounds), CGRectGetMaxY(self.bottomBar.bounds)/2 - CGRectGetMaxY(self.playButton.bounds)/2, CGRectGetMaxX(self.playButton.bounds), CGRectGetMaxY(self.playButton.bounds));
-//    
-//    self.pauseButton.frame = self.playButton.frame;
+//    CGFloat dt=0;
+//    CGFloat dw=self.bounds.size.width;
+//    CGFloat dh=self.bounds.size.height;
 //    
 //    
-//    self.progressSlider.frame = CGRectMake(CGRectGetMaxX(self.playButton.bounds), CGRectGetMaxY(self.bottomBar.bounds)/2 - CGRectGetMaxY(self.progressSlider.bounds)/2, CGRectGetMaxX(self.bounds) - CGRectGetMaxX(self.playButton.bounds)-10, CGRectGetMaxY(self.progressSlider.bounds));
+//    self.topBar.translatesAutoresizingMaskIntoConstraints=NO;
 //    
-//    self.timeLabel.frame = CGRectMake(CGRectGetMidX(self.progressSlider.frame)-50, CGRectGetMaxY(self.progressSlider.frame) -10, CGRectGetMidX(self.progressSlider.frame), CGRectGetMaxY(self.timeLabel.bounds));
-//    self.indicatorView.center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
+//    self.bottomBar.translatesAutoresizingMaskIntoConstraints=NO;
 //    
+//    self.progressSlider.translatesAutoresizingMaskIntoConstraints=NO;
+//    self.pauseButton.translatesAutoresizingMaskIntoConstraints=NO;
+//    self.playButton.translatesAutoresizingMaskIntoConstraints=NO;
+//    self.timeLabel.translatesAutoresizingMaskIntoConstraints=NO;
+//    self.bright.translatesAutoresizingMaskIntoConstraints=NO;
+//    self.brightSlider.translatesAutoresizingMaskIntoConstraints=NO;
+//    self.closeButton.translatesAutoresizingMaskIntoConstraints=NO;
+//    self.shareButton.translatesAutoresizingMaskIntoConstraints=NO;
+//    self.dowmButton.translatesAutoresizingMaskIntoConstraints=NO;
+//    self.titleLabel.translatesAutoresizingMaskIntoConstraints=NO;
 //    
-//    self.bright.frame=CGRectMake(CGRectGetWidth(self.bounds)/2-60, CGRectGetHeight(self.bounds)/2-60, 125, 125);
-//
-//    self.brightSlider.frame=CGRectMake(10, 105, 105, 5);
+//    //顶部
+//    [self.topBar makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(@(dt));
+//        make.right.equalTo(@(dt));
+//        make.left.equalTo(@(dt));
+//        make.width.equalTo(@(dw));
+//        make.height.equalTo(@(kVideoControlBarHeight+10));
+//    }];
+//    //返回
+//    
+//    [self.closeButton makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(@(10));
+//      //  make.right.equalTo(@(10));
+//        make.left.equalTo(@(5));
+//        make.width.equalTo(@(50));
+//        make.height.equalTo(@(50));
+//    }];
+//    [self.titleLabel makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(@(10));
+//        //  make.right.equalTo(@(10));
+//        make.left.equalTo(@(50));
+//       // make.width.equalTo(@(30));
+//        make.height.equalTo(@(50));
+//    }];
+//    //下载
+//    [self.dowmButton makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(@(10));
+//        make.right.equalTo(@(-60));
+//       // make.left.equalTo(@(10));
+//        make.width.equalTo(@(50));
+//        make.height.equalTo(@(50));
+//    }];
+//    //分享
+//    [self.shareButton makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(@(10));
+//          make.right.equalTo(@(-10));
+//       // make.left.equalTo(@(10));
+//        make.width.equalTo(@(50));
+//        make.height.equalTo(@(50));
+//    }];
+//    
+//    //底部
+//    [self.bottomBar makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(@(dh-kVideoControlBarHeight));
+//        make.right.equalTo(@(dt));
+//        make.left.equalTo(@(dt));
+//        make.width.equalTo(@(dw));
+//        make.height.equalTo(@(kVideoControlBarHeight));
+//    }];
+//    //精度条
+//    
+//    [self.progressSlider makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(@(15));
+//        make.right.equalTo(@(-10));
+//        make.left.equalTo(@(kVideoControlBarHeight));
+//        make.width.equalTo(@(dt-kVideoControlBarHeight));
+//        make.height.equalTo(@(5));
+//    }];
+//    //暂停
+//    [self.pauseButton makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(@(1));
+//        make.left.equalTo(@(5));
+//        make.width.equalTo(@(36));
+//        make.height.equalTo(@(57));
+//        make.bottom.equalTo(@-2);
+//    }];
+//    //播放
+//    [self.playButton makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(@(1));
+//        make.left.equalTo(@(5));
+//        make.width.equalTo(@(36));
+//        make.height.equalTo(@(57));
+//        make.bottom.equalTo(@-2);
+//    }];
+//    //时间
+//    
+//    [self.timeLabel makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(@(20));
+//        make.left.equalTo(@(dw-110));
+//        make.width.equalTo(@(100));
+//      //  make.height.equalTo(@(200));
+//        make.bottom.equalTo(@0);
+//    }];
+//    //亮度
+//    [self.bright makeConstraints:^(MASConstraintMaker *make) {
+//        make.center.equalTo(self);//子view在父view中间
+//        make.size.mas_equalTo(CGSizeMake(125, 125));//子view长300，高200
+//    }];
+//    //亮度进度条
+//    
+//    [self.brightSlider makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(@(95));
+//        make.left.equalTo(@(15));
+//          make.right.equalTo(@(-15));
+//        make.width.equalTo(@(100));
+//        make.height.equalTo(@(5));
+//        make.bottom.equalTo(@0);
+//    }];
+    
+    
+    self.playButton.frame = CGRectMake(CGRectGetMinX(self.bottomBar.bounds), CGRectGetMaxY(self.bottomBar.bounds)/2 - CGRectGetMaxY(self.playButton.bounds)/2, CGRectGetMaxX(self.playButton.bounds), CGRectGetMaxY(self.playButton.bounds));
+    
+    self.pauseButton.frame = self.playButton.frame;
+    
+    
+    self.progressSlider.frame = CGRectMake(CGRectGetMaxX(self.playButton.bounds), CGRectGetMaxY(self.bottomBar.bounds)/2 - CGRectGetMaxY(self.progressSlider.bounds)/2, CGRectGetMaxX(self.bounds) - CGRectGetMaxX(self.playButton.bounds)-10, CGRectGetMaxY(self.progressSlider.bounds));
+    
+    self.timeLabel.frame = CGRectMake(CGRectGetMidX(self.progressSlider.frame)-50, CGRectGetMaxY(self.progressSlider.frame) -10, CGRectGetMidX(self.progressSlider.frame), CGRectGetMaxY(self.timeLabel.bounds));
+    self.indicatorView.center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
+    
+    
+    self.bright.frame=CGRectMake(CGRectGetWidth(self.bounds)/2-60, CGRectGetHeight(self.bounds)/2-60, 125, 125);
+
+    self.brightSlider.frame=CGRectMake(10, 105, 105, 5);
 }
 
 - (void)didMoveToSuperview
