@@ -8,7 +8,36 @@
 `iOS >= 6.0`
 
    ![效果图](https://cloud.githubusercontent.com/assets/3974508/12646311/2c08ed6c-c60a-11e5-9f72-9336f075925f.jpg)
-   
+
+## Usage
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+Create player and set frame:
+
+```
+ MyPlayer *my=[[MyPlayer alloc] init];
+```
+
+Set video path:
+
+```
+ my.videoUrl=url;
+```
+
+Set video title:
+
+```
+my.videoTitle=@"测试";
+```
+
+Show it:
+
+```
+[self presentViewController:my animated:NO completion:^{
+    }];
+```
+
 ## Installation
 
 JinPlayer is available through [CocoaPods](http://cocoapods.org). To install
