@@ -9,7 +9,14 @@
 
    ![效果图](https://cloud.githubusercontent.com/assets/3974508/12646311/2c08ed6c-c60a-11e5-9f72-9336f075925f.jpg)
    
+## Installation
 
+JinPlayer is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```
+pod "JinPlayer"
+```
 ## License
 
 JinPlayer is available under the MIT license. See the LICENSE file for more info.   
