@@ -8,3 +8,8 @@
 `iOS >= 6.0`
 
    ![效果图](https://cloud.githubusercontent.com/assets/3974508/12646311/2c08ed6c-c60a-11e5-9f72-9336f075925f.jpg)
+   
+
+## License
+
+JinPlayer is available under the MIT license. See the LICENSE file for more info.   
