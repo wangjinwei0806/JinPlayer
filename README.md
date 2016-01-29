@@ -54,7 +54,7 @@ pod "JinPlayer"
 
 1.Download the pod files in th [Source directory](https://github.com/wangjinwei0806/JinPlayer/tree/master/Pod)
 
-2.Add both files to your Xcode project.
+2.Add files to your Xcode project.
 
 3.`#import MyPlayer.h` wherever you want to use the API.
 
