@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "JinPlayer"
- # s.version      = "0.0.1"
-  s.version      = “1.0.1”
+  s.version      = "1.0.1"
+  #s.version      = "1.0.0"
   s.summary      = "JinPlayer"
 
   # This description is used to generate tags and improve search results.
