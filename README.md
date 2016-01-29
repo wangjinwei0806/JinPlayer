@@ -60,4 +60,4 @@ pod "JinPlayer"
 
 ## License
 
-JinPlayer is available under the MIT license. See the LICENSE file for more info.   
+JinPlayer is available under the MIT license. See the [LICENSE](https://github.com/wangjinwei0806/JinPlayer/blob/master/LICENSE) file for more info.   
