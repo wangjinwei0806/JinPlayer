@@ -50,6 +50,13 @@ it, simply add the following line to your Podfile:
 ```
 pod "JinPlayer"
 ```
+**Manually from GitHub**
+
+1.Download the `WZMarqueeView.h` and `WZMarqueeView.m` files in th [Source directory](https://github.com/wangzz/WZMarqueeView/tree/master/WZMarqueeView)
+
+2.Add both files to your Xcode project.
+
+3.`#import WZMarqueeView.h` wherever you want to use the API.
 ## License
 
 JinPlayer is available under the MIT license. See the LICENSE file for more info.   
