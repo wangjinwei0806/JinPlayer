@@ -97,7 +97,6 @@ static const CGFloat kVideoControlBarAutoFadeOutTimeinterval = 5.0;
     
     self.bottomBar.frame = CGRectMake(CGRectGetMinX(self.bounds), CGRectGetMaxY(self.bounds) - kVideoControlBarHeight, CGRectGetMaxX(self.bounds), kVideoControlBarHeight);
     
-#pragma 注释的可以用Masonry 自动布局 
 //    CGFloat dt=0;
 //    CGFloat dw=self.bounds.size.width;
 //    CGFloat dh=self.bounds.size.height;
@@ -216,7 +215,7 @@ static const CGFloat kVideoControlBarAutoFadeOutTimeinterval = 5.0;
 //        make.height.equalTo(@(5));
 //        make.bottom.equalTo(@0);
 //    }];
-//    
+    
     
     self.playButton.frame = CGRectMake(CGRectGetMinX(self.bottomBar.bounds), CGRectGetMaxY(self.bottomBar.bounds)/2 - CGRectGetMaxY(self.playButton.bounds)/2, CGRectGetMaxX(self.playButton.bounds), CGRectGetMaxY(self.playButton.bounds));
     

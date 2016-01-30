@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "MyPlayer.h"
+#import <JinPlayer/MyPlayer.h>
 @interface ViewController ()
 @property (nonatomic,strong)MyPlayer *player;
 @end

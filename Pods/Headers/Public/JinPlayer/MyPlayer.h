@@ -1,0 +1,1 @@
+../../../JinPlayer/Pod/Classes/MyPlayer.h

@@ -16,7 +16,6 @@
 //#import <MediaPlayer/MediaPlayer.h>
 CGFloat const gestureMinimumTranslation = 20.0;
 
-
 typedef enum :NSInteger {
     kCameraMoveDirectionNone,
     kCameraMoveDirectionUp,
@@ -820,6 +819,7 @@ typedef enum :NSInteger {
     }
     return _movieBackgroundView;
 }
+
 
 
 
