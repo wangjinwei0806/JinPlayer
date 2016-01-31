@@ -50,7 +50,7 @@ it, simply add the following line to your Podfile:
 ```
 pod "JinPlayer"
 ```
-examples-> podfile
+Examples-> podfile
 ```
 platform :ios, '8.0'
 target 'Examples' do
