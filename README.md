@@ -50,6 +50,14 @@ it, simply add the following line to your Podfile:
 ```
 pod "JinPlayer"
 ```
+examples
+```
+platform :ios, '8.0'
+target 'Examples' do
+  pod 'JinPlayer', '~> 1.0.0'
+end
+```
+
 ## Manually from GitHub
 
 1.Download the pod files in th [Source directory](https://github.com/wangjinwei0806/JinPlayer/tree/master/Pod)
