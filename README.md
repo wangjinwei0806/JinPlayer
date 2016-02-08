@@ -8,7 +8,7 @@ JinPlayer
 
 ## Screenshots
 ![image](https://cloud.githubusercontent.com/assets/3974508/12646311/2c08ed6c-c60a-11e5-9f72-9336f075925f.jpg)
-   
+[见APP](https://itunes.apple.com/us/app/wei-chuang-kou-jing-pin-jian/id1078191276?l=zh&ls=1&mt=8)
 ## Requirements
 
 `iOS >= 6.0`
