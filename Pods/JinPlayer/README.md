@@ -8,7 +8,8 @@ JinPlayer
 
 ## Screenshots
 ![image](https://cloud.githubusercontent.com/assets/3974508/12646311/2c08ed6c-c60a-11e5-9f72-9336f075925f.jpg)
-   
+## 以下 app 就是用的这个
+[微窗口(精品,简单)](https://itunes.apple.com/us/app/wei-chuang-kou-jing-pin-jian/id1078191276?l=zh&ls=1&mt=8)
 ## Requirements
 
 `iOS >= 6.0`
@@ -50,6 +51,14 @@ it, simply add the following line to your Podfile:
 ```
 pod "JinPlayer"
 ```
+Examples-> podfile
+```
+platform :ios, '8.0'
+target 'Examples' do
+  pod 'JinPlayer', '~> 1.0.0'
+end
+```
+
 ## Manually from GitHub
 
 1.Download the pod files in th [Source directory](https://github.com/wangjinwei0806/JinPlayer/tree/master/Pod)
